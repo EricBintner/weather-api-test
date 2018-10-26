@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+	<title>WEATHER</title>
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=KoHo:400,500,600i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/Glide.js/2.1.0/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/Glide.js/2.1.0/css/glide.theme.min.css">
+    <link rel="stylesheet" href="style.css">
+<box>
+	 <script language="javascript">
+        function _politeLoad(urls, onComplete) {
+            var l = urls.length,
+                loaded = 0,
+                checkProgress = function() {
+                    if (++loaded === l && onComplete) {
+                        onComplete();
+                    }
+                },
+                i;
+            for (i = 0; i < l; i++) {
+                _loadScript(urls[i], checkProgress);
+            }
+        }
+        function _loadScript(url, callback){
+
+            var script = document.createElement("script")
+            script.type = "text/javascript";
+
+            if (script.readyState){  //IE
+                script.onreadystatechange = function(){
+                    if (script.readyState == "loaded" ||
+                            script.readyState == "complete"){
+                        script.onreadystatechange = null;
+                        callback();
+                    }
+                };
+            } else {  //Others
+                script.onload = function(){
+                    callback();
+                }; 
+            }
+
+            script.src = url;
+            document.getElementsByTagName("head")[0].appendChild(script);
+        }
+        function pageLoadedHandler() {
+           
+            _politeLoad([
+                'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+                'https://cdn.jsdelivr.net/npm/@glidejs/glide',
+                'script.js'
+            ], function() {
+                init();
+            });        
+        }
+    </script>
+</box>
+</head>
+<body onload="pageLoadedHandler();">
+
+
+
+
+    <div id="Glide" class="glide">
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><span>&#8249;</span></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><span>&#8250;</span></button>
+        </div>
+        <div class="glide__wrapper glide__track" data-glide-el="track">
+            <div class="dom-inject glide__slides">
+
+            </div>
+        </div>
+        
+    </div>  
+
+
+	
+</body>
+</html>
