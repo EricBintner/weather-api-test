@@ -1,8 +1,8 @@
 # weather-api-test
 
-Run:
-npm install 
-gulp
+Run:  
+$ npm install  
+$ gulp
 
 The concept was to mash together 2 publically sharable gifs to indicate weather conditions instead of specific weather icons. This implementation is basic -- it uses the icon unicode number from the JSON and adds two gifs specific to that. Also it finds other weather json data and populates the DOM. Ideally, to be true to the concept, more conditions like temperature could easily be buit on top of this to make even more conditional and specifc gif combinations. 
 
